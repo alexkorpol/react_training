@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Card } from './components/Card';
+
+import App from './components/App';
 
 // import './index.css';
 
@@ -24,7 +25,7 @@ import { Card } from './components/Card';
  
 // console.log(card);
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Card />);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
