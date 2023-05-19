@@ -1,33 +1,35 @@
 import data from '../../data.json';
 import { Head } from '../Head/Head';
+// import styled from 'styled-components';
+import { Container, Photo } from './Card.styled';
 // import css from './Card.module.css';
 // import clsx from 'clsx';
+
+
 
 export const Card = ({isOnline, isOffline}) => {
     return data.map((photo) => {
       return (
-        <div
-          key={photo.id}          
-        >          
+        <Container key={photo.id}  isHide={isOnline}>          
         
-        <img
-          src={photo.url}
-            alt={photo.title}
-        />
+            <Photo
+              src={photo.url}
+              alt={photo.title}
+            />
 
-      <div >
-          <h5>Card title: {photo.title}</h5>
-          {/* {head()} */}
-          {/* {Head({ clas:"card-title", id:"id-123"})} */}
-          <Head clas="card-title" id="id-123">
-            qwerty
-            <div>23456</div>
-            <p>asdfgh</p>
-          </Head>
-        {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-        <a href="http" >Go somewhere</a>
-      </div>
-    </div>)
+            <div >
+                <h5>Card title: {photo.title}</h5>
+                 {/* {head()} */}
+                {/* {Head({ clas:"card-title", id:"id-123"})} */}
+                <Head clas="card-title" id="id-123">
+                  qwerty
+                <div>23456</div>
+                <p>asdfgh</p>
+                </Head>
+                {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                <a href="http" >Go somewhere</a>
+              </div>
+        </Container>)
     })
 }
 

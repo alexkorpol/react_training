@@ -12,6 +12,8 @@ export const Head = ({ clas, id, data, children }) => {
   
 }
 Head.propTypes = {
-    id: PropTypes.string,
-    clas: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    clas: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(PropTypes.string),
+    children: PropTypes.array,
 };
